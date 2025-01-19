@@ -5,6 +5,11 @@ class RestaurantMenu:
     def add_item(self, name, price):
      self.menu_items[name] = price
 
+    def remove_item(self, name):
+        if name in self.menu_items:
+            return True
+        return False
+
     def get_price(self, name):
      return self.menu_items.get(name, None)
 
@@ -16,3 +21,4 @@ class RestaurantMenu:
 
     if __name__ == "_main_":
         main()
+
