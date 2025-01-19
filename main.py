@@ -12,7 +12,14 @@ class RestaurantMenu:
 
     def get_price(self, name):
      return self.menu_items.get(name, None)
-  
+
+    
+    def update_price(self, name, new_price):
+       if name in self.menu_items:
+          self.menu_items[name] = new_price
+          return True
+       return False
+        
     def display_menu(self):
        print("Menu Items:")
        for item, price in self.menu_items.items():
